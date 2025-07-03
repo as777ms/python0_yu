@@ -210,11 +210,6 @@ print("I love " + celebrity)
 #
 #
 
-# 🧑‍🤝‍🧑 Lists
-```bash
-friends = ["Tom", "Henry", "Andrey"]
-print(friends[0])
-```
 
 #
 #
@@ -229,4 +224,80 @@ print(friends[0])
 
 #### Not meant to be perfect — just real, practical progress 💪
 
+# # # # # # # # # # # # #  #
+#
+#
+#
+#
+#
 
+# 🧑‍🤝‍🧑 Lists
+```bash
+friends = ["Tom", "Henry", "Andrey"]
+print(friends[0])
+```
+
+```bash
+lucky_numbers = [4, 5, 3, 8, 21, 7]
+friends = ["Tom", "Henry", "Andrey","Andrey", "Adele", "Gaga"]
+```
+### here is the function that helps us to extend one list to another it adds another lists ellemend in the end to the existed list
+```bash
+friends.extend(lucky_numbers)
+```
+### we can too add individuel ellements onto a list it can help append another item onto the end of the list (addds to the end)
+```bash
+friends.append("Jim")
+```
+
+### another function that can help to us to add item in the middle of the list it takes 2 parametrs
+```bash
+friends.insert(1, "Alem")
+```
+### removing elements it works by typing the name of the item not its index
+```bash
+friends.remove("Henry")
+```
+### this function can remove the entire list and give us empty list
+```bash
+friends.clear()
+```
+
+### this function pop off removes last item of the list
+```bash
+friends.pop()
+```
+### here is another function that helps us to check gives us its index if the item doesnt exist in the list it gives error in console
+```bash
+print(friends.index("Henry"))
+```
+
+### here we have got function that counts how many times does item was in the list (it counts the same items)
+```bash
+print(friends.count("Andrey"))
+```
+### also we have got sort function that sorts intems into alphabetical order
+```bash
+friends.sort()
+```
+### we can also reverse the list
+```bash
+lucky_numbers.reverse()
+print(lucky_numbers)
+```
+### another function that copies lists items
+```bash
+friends2 = friends.copy()
+print(friends2)
+print(friends)
+```
+
+
+#
+#
+#
+#
+##
+#
+#
+# Tumples
