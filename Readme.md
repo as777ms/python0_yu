@@ -300,4 +300,138 @@ print(friends)
 ##
 #
 #
-# Tumples
+
+
+# Tuples
+
+
+
+
+```bash
+coordinates = (4, 5)
+```
+### here we can equel one coordinate by using its index to something else it would give to us error that (TypeError: 'tuple' object does not support item assignment)
+#### in tuples we cant mutate our tuple we cant eddit delet or do some stuuf like we done with the list
+#### we use tuples in practise for data that we never gonna change data cant me mutadet
+```bash
+coordinates[1] = 10
+```
+#### here we can create a list of tuples
+```bash
+coordinates = [(4, 5), (6, 7), (80, 34)]
+```
+#### SO THE REAL TRUTH IS THAT WE USE TUPLES WHEN WE DONT WANT TO CHANGE DATA MUTADE IT ITS LIKE CONST IN JS A LITTLE SO IN REAL WORK WE SHOULD WORK ONLY BY USING LIST
+
+```bash
+print(coordinates[1])
+```
+_______________________
+#
+#
+#
+#
+#
+#
+#
+#
+
+
+
+
+# Functions
+
+### in python when python sees (def) it understands that person wants to use function and calls it
+
+```bash
+def say_hi():
+     print("Hello User")
+say_hi()
+```
+### after creating def we are givint it a name ;like giving a name to a varieble and yep any code inside the function
+### must be intended and if it writes out of that function it is out of the function
+
+
+
+```bash
+def say_hi():
+     print("Hello User")
+
+
+print("Top")
+say_hi()
+print("Bottom")
+```
+### here in top i think there is no explanation needs bcs first first it intead the code out of function after into of it after in the end as you see
+#
+#
+
+### another thing we can do with functions is like adding parametr into it
+
+```bash
+def say_hi(name):
+     print("Hello", name)
+
+say_hi("Anisa")
+say_hi("Andrey")
+```
+### we can also include it more than one parametrs
+#
+#
+```bash
+def say_hi(name, age):
+    print("Hello", name)
+    print("You are " + age + " years old")
+say_hi("Anisa", "17")
+```
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+
+# Return statement
+
+#### return gives a walue wathewer it calls a function it allows us to return whats a calling function
+
+```bash
+def cube(num):
+    return num ** 3
+print(cube(4))
+```
+#
+#
+#
+### here is another way of returnning this kind of function
+
+```bash
+def cube(num):
+    return num * num * num
+     # print("code")
+result = cube(4)
+print(result)
+```
+
+### and yep WARNING we are not able to put any code after return statement
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+
+# If statement
+
+### we are giving to it condition and it will give to us true or false if its true we return true one
