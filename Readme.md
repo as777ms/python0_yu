@@ -435,3 +435,271 @@ print(result)
 # If statement
 
 ### we are giving to it condition and it will give to us true or false if its true we return true one
+
+
+```bash
+is_male = False
+
+if is_male:
+     print("You are male")
+else:
+     print("You are female")
+```
+#
+#
+#
+#
+
+```bash
+is_male = True
+is_tall = False
+if is_male and is_tall:
+     print("You are tall male")
+elif is_male and not(is_tall):
+     print("You are a short male")
+elif not(is_male) and is_tall:
+     print("You are not a male but tall")
+else:
+     print("You are not a male but not tall")
+```
+
+
+#
+#
+#
+#
+#
+
+
+# IF STATEMENTS & COMPARISONS
+
+```bash
+def max_num(num1, num2, num3):
+    if num1 >num2 and num1 >num3:
+        return num1
+    elif num2 > num1 and num2 > num3:
+        return num2
+    else:
+        return num3
+
+print(max_num(4, 2,3))
+```
+
+#
+#
+#
+
+### trying to build a calculator
+
+```bash
+num1 = float(input("Enter first Number: "))
+op = input("Enter operator: ")
+num2 = float(input("Enter second Number: "))
+
+if op == "+":
+    print (num1 + num2)
+elif op == "-":
+    print (num1 - num2)
+elif op == "/":
+    print(num1 // num2)
+elif op == "*":
+    print(num1 * num2)
+else:
+    print("Invalid Operator")
+```
+
+#
+#
+#
+#
+#
+#
+
+
+# DICTIONARIES
+
+### key walues per
+
+### when we want to acces to some information inside this key we can acces by using its key
+
+
+### first we give it specific name example
+```python
+monthConversions = {
+    "Jan": "January",
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sep": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December"
+    # KEY : WALLUE
+    # as a KEY we can use number too
+}
+# ! WARRNING keys must be uniq
+
+
+# first way
+print(monthConversions["Nov"])
+
+# second way
+print(monthConversions.get("Jan", "Not a valid key"))
+```
+
+
+#
+#
+#
+#
+#
+#
+#
+
+# WHILE
+
+```bash
+i = 1
+while i<=10:
+    # as long as this guy (i<=10) is True we gonna loop through this i += 1 we gonna add 1 to i
+    # now we gonna do , wo gonna go again to this while declaration and check that again until its True
+    #  on every iteration throuth the loop and this point i is equel to 2 bcs it truns arround for the last time and this will repeat 10 time
+    #  till its getting True and stops the loop ( in general as long we are not true we are keep executing through our loop)
+    print(i)
+    # i = i + 1
+    i += 1
+
+print("Done with loop")
+```
+
+#
+#
+#
+#
+#
+
+```bash
+i = 1
+while i<=10:
+    # as long as this guy (i<=10) is True we gonna loop through this i += 1 we gonna add 1 to i
+    # now we gonna do , wo gonna go again to this while declaration and check that again until its True
+    #  on every iteration throuth the loop and this point i is equel to 2 bcs it truns arround for the last time and this will repeat 10 time
+    #  till its getting True and stops the loop ( in general as long we are not true we are keep executing through our loop)
+    print(i)
+    # i = i + 1
+    i += 1
+
+print("Done with loop")
+```
+
+
+
+#
+#
+#
+#
+#
+#
+#
+
+
+
+
+# Building A Guessing Game
+
+### here we gona use if statements, while loop and vars, and all that cool things to specify sicret word and user must interact with program
+### user must be able to keep guessing what is the secret word is and keep typing in different responses untill they get the secret word
+### now lets go had and create it
+#
+#
+#
+#
+#
+```bash
+# secret word
+secret_word = "giraffe"
+# varieble to store users guess
+guess = ""
+
+
+# if they dont guess it correctly we want them to promt it correctly again
+# so we cant just use a single input statement
+# we actually have to use something called while loop and we can use the while loop in order to continuenly ask the person
+    # to guess the word untill they guess it correctly
+
+    # so lets go head and create a while loop
+    # after creating while we need to specify a looping condition or a looping guard
+    # it means as long as its true we gonna keep looping through this loop so basicly we wanna say we gonna keep looping
+    # as long as users guess is not equel to the secret word
+while guess != secret_word:
+
+# so we gonna here ask them to input secret word
+# here we can take this guess varieble and set it equel to input
+    guess = input("Enter a guess: ")
+    # we are storring watever user prints inside this guess = "" varieble
+
+print("You win!")
+```
+#
+#
+#
+#
+
+## full code down here without explanation
+#
+```bash
+secret_word = "giraffe"
+guess = ""
+
+while guess != secret_word:
+    guess = input("Enter guess: ")
+
+print("You win! ")
+```
+
+__________________________________________________________
+
+### so right now we gonna set limit to it
+### limmit of 3 tries if they win win if not lose the game
+
+
+
+```bash
+secret_word = "giraffe"
+guess = ""
+# under here we gonna create a cnt of how many times does user has got tiket to find a guees
+guess_count = 0
+# here we gonna create another element that called guess limit
+guess_limit = 3
+# here is one another var to stop loop if it is False it means user is still in game id True it means Nah game over buddy
+out_of_guess = False
+while guess != secret_word and not(out_of_guess):
+    # top and if their not out of 👆 guesses then we gonna keep looping
+    # we come here after limits var creating
+    # first in the top we must to check does person end up with his tikets or no
+    if guess_count < guess_limit:
+        guess = input("Enter guess: ")
+        # down here after writing guess_count (every time we go throught the loop we want to increment that guess count
+        guess_count += 1
+    else:
+        out_of_guess = True
+
+# and if the user as we set in the top oout of guesses if its true we print your out
+if out_of_guess:
+    print("You LOSE! buddy ")
+    # if they not out of guesses that means that they guess the word cocrrectly
+else:
+    print("You win! ")
+```
+
+
+
+
+
+# For loop
+
+# for
