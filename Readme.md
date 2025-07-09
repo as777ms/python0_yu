@@ -709,7 +709,12 @@ else:
 
 # for
 
-### it allows us to loop over different collections of items arrays, letters inside str, numbers....
+
+### It allows us to loop over different collections of items:
+- Arrays
+- Letters inside strings
+- Numbers...
+
 
 ```bash
 for letter in "Giraffe Academy":
