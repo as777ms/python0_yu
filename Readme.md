@@ -696,10 +696,200 @@ else:
     print("You win! ")
 ```
 
-
-
+#
+#
+#
+#
+#
+#
+#
 
 
 # For loop
 
 # for
+
+### it allows us to loop over different collections of items arrays, letters inside str, numbers....
+
+```bash
+for letter in "Giraffe Academy":
+    # its gonna say (for) every (letter) inside this "Giraffe Academy"
+    print(letter)
+    # so how it works we can define the varieble and that varieble will change on each ideration of the loop
+    # so in the first ideartion of the loop this (letter) varieble represented a "G" letter on the seccond ideration of the loop "i"
+```
+#
+#
+
+### here we can use it in array
+
+```bash
+friends = ["Tom", "Gaga", "Charli", "Troye"]
+
+for friend in friends:
+    print(friend)
+```
+
+
+#
+#
+#
+#
+### here it is about numbers
+
+```bash
+num1 = 10
+
+for index in range(num1 +1 ):
+    print(index)
+```
+
+#
+#
+#
+```bash
+num1 = 10
+for index in range(1, num1 +1 ):
+    print(index)
+```
+#
+#
+#
+
+```bash
+for index in range(10):
+    print(index)
+```
+#
+#
+#
+```bash
+for index in range(3, 10):
+    print(index)
+```
+
+##
+#
+#
+#
+#
+
+```bash
+friends = ["Tom", "Gaga", "Charli", "Troye"]
+
+for friend in range(len(friends)):
+    # print(friend)
+    # print(friends[friend])
+    print(friends[0])
+```
+
+#
+#
+#
+#
+
+
+
+```bash
+for index in range(5):
+    if index == 0:
+        print("first Iteration")
+    else:
+        print("not a first Iteration")
+```
+
+
+
+
+
+# EXPONENT FUNCTION
+###  2^3 it  calls 2 raised to the 3 power
+#
+#
+#
+
+```bash
+def raise_to_power(base_num, power_num):
+    # so wegonna take the base_num and power it to power_num
+    # so right now we dont know which walue can user add in power_num bcs we need qube only so bcs of it we agoing to create a for
+    result = 1
+    for index in range(power_num):
+        # it means we loop sroth it as many as power_num
+        # result *= base_num
+    # or
+        result = result * base_num
+    return result
+
+print(raise_to_power(2, 3))
+```
+
+
+
+
+#
+#
+#
+#
+#
+#
+
+
+
+# 2D list & Nested Loops
+
+```bash
+number_grid = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [0]
+]
+
+print(number_grid[2][1])
+
+#nested for loop
+
+
+for row in number_grid:
+    # print(row) we need to create another for loop to acces inside its
+    for column in row:
+        print(column)
+```
+#
+#
+#
+#
+#
+
+
+
+# Build a translator
+
+
+### the rule is any vowel becomes a g
+```bash
+def translate(phrase):
+    translation = ' '
+    for letter in phrase:
+        if letter in "AEIOUaeiou":
+            if letter.isupper():
+                translation = translation + "G"
+            else:
+            # it means if the letter inside this string is that aeiou it checks that...
+                translation = translation + "g"
+        else:
+            translation = translation + letter
+    return translation
+
+print(translate(input("Enter a phrase: ")))
+```
+
+
+#
+#
+#
+#
+#
+
+# Commnets
+
