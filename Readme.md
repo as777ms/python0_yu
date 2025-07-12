@@ -898,3 +898,271 @@ print(translate(input("Enter a phrase: ")))
 
 # Commnets
 
+
+# Try Except
+
+### we are now talking about catching errors in python
+### in this tutorial we will talk about catching errors in python now a lot of times  when we are running Python programs, we will encounter different errors
+### so different situtations could come up and your program might throw an error or it might throw an exception .And a lot of time when this situation happens
+### they completely stop your program from running . and what we can actualy do is we can watch out for, you know certain specific errors that are going to pop up in our program
+### and we can actually handle them . SO instead our program just breaking or stop executing , we can actually get handle those errors and do things when they occcur
+
+#
+#
+#
+#
+#
+#
+#
+
+
+```bash
+number = int(input("Enter a number: "))
+print(number)
+```
+#
+#
+### so in the top it says to us to enter a number we enter everythign cool bcs it is (int)
+### but what if we enter string into that (we just ignore what does the promt says and put string
+### now when we enter this the program is gonna throw the error
+### it gives this error Traceback (most recent call last):
+```bash
+  File "/home/archandos/PycharmProjects/PythonProject/app.py", line 713, in <module>
+    number = int(input("Enter a number: "))
+ValueError: invalid literal for int() with base 10: 'asdfg'
+
+Process finished with exit code 1
+```
+#
+#
+### so in general we told them to answer in int they answer in string bcs of it it broke the program
+#
+#
+### but if you are writing a real live python program .,, you dont want something like this to trip up your porgram. You dont want the entire program to break when somebody just forgets to enter in a number , right? istead of text
+### you wanna be able to handle all of this situations . and in order to handle them, we can use something called a try except and catch and block them. and a try except block will basically allow your program to try out a piece of code.
+### and if everything goes well , then we are great like we can try out entering in the number. And if the user enters in correct number they are great but if they dont enter the correct number , then we can basically like account for that. So they entered in something like a string when they supposted to inter in the number
+### we could tell them like (hey you entered string or the wrong thing )
+#
+#
+### now we gonna see how we gonna use try except bloks
+
+#
+```bash
+try:
+    number = int(input("Enter a number: "))
+    print(number)
+except:
+    # why does this except is in the line bcs right now we except every error we are not choosing special error
+    print("Invalid input")
+```
+#
+#
+#
+
+### so if the user gonna type something wrong we gonna be able to catch what the user does wrong and print out invelid input onto the screen
+#
+### we are doint this to protect our program
+
+
+
+
+```bash
+try:
+    value = 10/0
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError:
+    print("Divided by zero")
+except ValueError:
+    print("Invalid input")
+```
+#
+#
+#
+### we can print the actual error too
+#
+#
+#
+```bash
+try:
+    answer = 10/0
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError as err:
+    print(err)
+    # here
+except ValueError:
+    print("Invalid input")
+```
+
+
+#
+#
+#
+#
+#
+#
+# Reading Files
+# READING FROM EXTERNAL FILES IN PYTHON
+#### read files that outside of our python file
+
+
+##
+
+#
+##
+#
+
+
+### how to open files in one directory if they are in one folder open
+
+```bash
+open("employers.txt", "r")
+
+# this r means read
+
+open("employers.txt", "w")
+```
+### this w means eddit text write something into it
+#
+#
+#
+
+```bash
+open("employers.txt", "r")
+```
+### here is something called a this means append information onto the end of the file . so you cant modify any of the information in the file
+### You cant change any of the information, but you can add new information
+#
+#
+#
+```bash
+open("employers.txt", "r+")
+```
+### . And there is one more, which is R plus and this basicaly means read and write
+#
+#
+#
+```bash
+open("employers.txt", "r")
+```
+### so in our case we gonna regulary work with r we going to be reading from the file . now this open function will esantelly just open the file
+#
+#
+### so we gonna store it inside our varieble
+#
+```bash
+employers_file = open("employers.txt", "r")
+```
+### we have got close function too for nobody to have got none acces to it
+```bash
+employers_file.close()
+```
+#
+### so first of all we gonna check does this file is readeble or no
+#
+#
+#
+```bash
+print(employers_file.readable())
+# its output is boolen true or false
+```
+#
+#
+#
+```bash
+print(employers_file.read())
+
+# print(employers_file.readline())
+# this is gonna read an individual line inside of this file
+```
+
+```bash
+print(employers_file.readlines()[0])
+```
+### here it will show to us list of them i mean array here
+### we can add index of array here too in the second parametr
+#
+#
+### we can use this readline function for (for loops too)
+
+
+
+
+#
+#
+#
+#
+#
+#
+#
+#
+# True Version
+
+# 📁 Working with Files in Python
+
+This section covers how to **open, read, write, and append** to files using Python’s built-in `open()` function.
+
+---
+
+## 🔓 Opening Files
+
+To work with external files (like `.txt`), use the `open()` function:
+
+```python
+open("employers.txt", "r")   # "r" = read mode
+open("employers.txt", "w")   # "w" = write mode (overwrites)
+open("employers.txt", "a")   # "a" = append mode (adds to the end)
+open("employers.txt", "r+")  # "r+" = read + write mode
+```
+
+#
+#
+#
+#
+```bash
+employers_file = open("employers.txt", "r")
+
+# Check if the file is readable
+print(employers_file.readable())  # Output: True or False
+
+# Read the entire content
+print(employers_file.read())
+
+# Read just the first line
+print(employers_file.readline())
+
+# Read all lines as a list (array)
+print(employers_file.readlines()[0])  # First line using index
+
+# Using a for loop to read all lines
+for employer in employers_file.readlines():
+    print(employer)
+
+# Always close the file after you're done
+employers_file.close()
+```
+#
+#
+```bash
+📄 Example file: employers.txt
+Anna - Librarian
+John - Manager
+Katy - Project Manager
+Rosalia - Cleaner
+```
+#
+#
+#
+
+📌 Note
+> Always close() the file after using it to free system resources.
+
+> You can also use a safer method with with statement:
+```bash
+with open("employers.txt", "r") as employers_file:
+    print(employers_file.read())
+# This way, Python automatically closes the file for you.
+```
+
+#
